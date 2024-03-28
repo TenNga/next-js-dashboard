@@ -1,14 +1,16 @@
 import Sidebar from "../ui/dashboard/sidebar/sidebar";
 import Navbar from "../ui/dashboard/navbar/navbar";
-const Layout = ({Children}) => {
+import style from '../ui/dashboard/dashboard.module.css';
+
+const Layout = ({children}) => {
     return(
-        <div>
-            <div>
+        <div className={style.container}>
+            <div className={style.menu}>
                 <Sidebar />
             </div>
-            <div>
+            <div className={style.content}>
                 <Navbar/>
-                {Children}
+                {children}
             </div>
         </div>
     )

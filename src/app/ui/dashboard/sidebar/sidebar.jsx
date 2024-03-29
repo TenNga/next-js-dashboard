@@ -1,3 +1,4 @@
+import Menulink from './menuLink/menuLink';
 import style from './sidebar.module.css'
 import { 
     MdDashboard,
@@ -77,9 +78,21 @@ const menuItems = [
 const Sidebar = () => {
     return (
         <div className={style.container}>
-            <ul>
+            <div className={style.user}>
+                <img className={style.userImage} src="/noavatar.png" alt="default user icon" width="50" height="50" />
+                <div className={style.userDetails}>
+                    <span className={style.userName}>John Lee</span>
+                    <span className={style.userTitle}>Administration</span>
+                </div>
+            </div>
+            <ul className={style.list}>
                 {menuItems.map(catg => (
-                    <li key={catg.title}>{catg.title}</li>
+                    <li key={catg.title}>
+                        <span className={style.catg}>{catg.title}</span>
+                        {catg.list.map(item => (
+                            <Menulink key={item.title} item={item} />
+                        ))}
+                    </li>
                 )
                 )}
             </ul>

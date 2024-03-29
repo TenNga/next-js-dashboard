@@ -9,7 +9,8 @@ import {
     MdPeople,
     MdOutlineSettings,
     MdHelpCenter,
-    MdWork
+    MdWork,
+    MdLogout
      } from 'react-icons/md';
 
 const menuItems = [
@@ -96,6 +97,10 @@ const Sidebar = () => {
                 )
                 )}
             </ul>
+            <button className={style.logout}>
+                <MdLogout/>
+                logout
+                </button>
         </div>
     )
 }

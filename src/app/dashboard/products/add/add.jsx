@@ -6,7 +6,6 @@ const AddProductPage = () => {
     )
 
 };
-//test
 
 
 export default AddProductPage;

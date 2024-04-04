@@ -4,7 +4,9 @@ const AddProductPage = () => {
     return (
         <div className={style.container}>AddProduct</div>
     )
-    
+
 };
+//test
+
 
 export default AddProductPage;

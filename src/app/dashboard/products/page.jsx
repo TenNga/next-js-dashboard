@@ -11,7 +11,7 @@ const ProductsPage = () => {
             <div className={style.top}>
                  <Search placeholder="Search for a product..."/>
                  <Link href='/dashboard/products/add'>
-                    <button className={style.addButton}>Add User</button>
+                    <button className={style.addButton}>Add Product</button>
                  </Link>
             </div>
             <div className={style.table}>
